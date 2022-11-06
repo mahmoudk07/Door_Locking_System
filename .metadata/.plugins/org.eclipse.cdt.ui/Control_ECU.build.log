@@ -1,0 +1,45 @@
+21:26:13 **** Incremental Build of configuration Debug for project Control_ECU ****
+make all 
+Building file: ../Control_Application.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Control_Application.d" -MT"Control_Application.o" -c -o "Control_Application.o" "../Control_Application.c"
+In file included from ../Control_Utilities.h:16,
+                 from ../Control_Application.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Control_Application.c
+ 
+Building file: ../Control_Utilities.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"Control_Utilities.d" -MT"Control_Utilities.o" -c -o "Control_Utilities.o" "../Control_Utilities.c"
+In file included from ../Control_Utilities.h:16,
+                 from ../Control_Utilities.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Control_Utilities.c
+ 
+Building target: Control_ECU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Control_ECU.map -mmcu=atmega32 -o "Control_ECU.elf"  ./MCAL/uart/uart.o  ./MCAL/twi/twi.o  ./MCAL/timer1/timer1.o  ./MCAL/gpio/gpio.o  ./MCAL/PWM/pwm.o  ./HAL/EEPROM/eeprom.o  ./HAL/DC_Motor/dc_motor.o  ./HAL/Buzeer/buzzer.o  ./Control_Application.o ./Control_Utilities.o   
+Finished building target: Control_ECU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Control_ECU.elf  >"Control_ECU.lss"
+Finished building: Control_ECU.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Control_ECU.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8424 bytes (25.7% Full)
+(.text + .data + .bootloader)
+
+Data:         33 bytes (1.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+21:26:14 Build Finished. 0 errors, 2 warnings. (took 653ms)
+
