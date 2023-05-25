@@ -3,7 +3,7 @@
 ## The flow of Project:
 ### - User firstly entered a password
 ### - MCU ask user to re-enter a password
-### - Two Passwords are send serially using UART to another MCU to check validaty of Two passwords
+### - Two Passwords are send serially using UART to another MCU to check validaty of Two   passwords
 ### - if two passwords are matched --> MCU will save this password into EEPROM
 ### - two options will appeared to user on the screen 
 ### - open door option and Change password option
